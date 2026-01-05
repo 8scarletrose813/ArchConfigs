@@ -1,0 +1,198 @@
+* {
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+    transition: none;
+
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+}
+
+@define-color bg #000000;
+@define-color fg #a1a1a1;
+@define-color dim #000000;
+@define-color border #ffffff;
+@define-color sel-bg #a1a1a1;
+@define-color sel-fg #000000;
+
+window,
+.dialog,
+.background {
+    background-color: @bg;
+    color: @fg;
+}
+
+headerbar {
+    background-color: @bg;
+    border-bottom: 1px solid @border;
+    padding: 0;
+    min-height: 0;
+}
+
+headerbar separator,
+headerbar > box > separator {
+    background-color: @dim;
+}
+
+menubar,
+toolbar {
+    background-color: @bg;
+}
+
+button {
+    background-color: @bg;
+    color: @fg;
+    border: 1px solid @dim;
+    padding: 2px 6px;
+}
+
+button:hover,
+button:checked {
+    background-color: @sel-bg;
+    color: @sel-fg;
+}
+
+entry,
+textview,
+spinbutton {
+    background-color: @bg;
+    color: @fg;
+    border: 1px solid @border;
+    padding: 2px;
+}
+
+entry selection,
+textview selection {
+    background-color: @sel-bg;
+    color: @sel-fg;
+}
+
+treeview {
+    background-color: @bg;
+    color: @fg;
+}
+
+treeview row {
+    color: @fg;
+}
+
+treeview row:selected,
+treeview row:selected:focus,
+treeview row:selected:backdrop {
+    background-color: @sel-bg;
+    color: @sel-fg;
+}
+
+treeview row:selected * {
+    color: @sel-fg;
+}
+
+treeview gridline,
+treeview separator {
+    background-color: @dim;
+}
+
+iconview,
+.view,
+viewport,
+scrolledwindow {
+    background-color: @bg;
+    color: @fg;
+}
+
+iconview:selected,
+iconview:selected:focus,
+iconview:selected:backdrop {
+    background-color: @sel-bg;
+    color: @sel-fg;
+}
+
+iconview cell {
+    background-color: transparent;
+    color: @fg;
+}
+
+iconview cell:selected,
+iconview cell:selected:focus,
+iconview cell:selected:backdrop {
+    background-color: @sel-bg;
+    color: @sel-fg;
+}
+
+.nemo-window,
+.nemo-window iconview,
+.nemo-window .view {
+    background-color: @bg;
+}
+
+scrollbar,
+scrollbar trough {
+    background-color: @bg;
+    border: none;
+}
+
+scrollbar slider {
+    background-color: @dim;
+    min-width: 4px;
+    min-height: 4px;
+}
+
+scrollbar slider:hover {
+    background-color: @border;
+}
+
+scrollbar.overlay-indicator {
+    background-color: transparent;
+}
+
+scrollbar.overlay-indicator slider {
+    background-color: @dim;
+}
+
+paned > separator {
+    background-color: @dim;
+    min-width: 1px;
+    min-height: 1px;
+}
+
+frame,
+separator {
+    border-color: @dim;
+}
+
+menu,
+menubar,
+menuitem {
+    background-color: @bg;
+    color: @fg;
+    border: none;
+}
+
+menuitem:hover,
+menuitem:selected {
+    background-color: @sel-bg;
+    color: @sel-fg;
+}
+
+tooltip {
+    background-color: @bg;
+    color: @fg;
+    border: 1px solid @border;
+}
+
+progressbar trough {
+    background-color: @bg;
+    border: 1px solid @dim;
+}
+
+progressbar progress {
+    background-color: @border;
+}
+
+box,
+grid {
+    padding: 0;
+    margin: 0;
+}
