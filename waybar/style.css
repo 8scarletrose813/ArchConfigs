@@ -1,21 +1,23 @@
 * {
-	font-family: monospace;
+	font-family: montserrat;
 	font-size: 10px;
 	font-weight: 600;
 	min-height: 0;
 
 	border: none;
-	border-radius: 0;
+	border-radius: 45px ;
 	box-shadow: none;
 	text-shadow: none;
 	transition: none;
 }
-
-window#waybar {
-	background: #0f1714;
-	color: #c8c2b8;
+window{
+	background: rgba(176, 196, 222, 0.1);
+	color: #ffffff;
 }
-
+window#waybar {
+	background: rgba(176, 196, 222, 0.4);
+	color: #ffffff	;
+}
 /* Workspaces */
 
 #workspaces {
@@ -45,8 +47,8 @@ window#waybar {
 }
 
 #workspaces button.urgent {
-	background: #666600;
-	color: #0f1714;
+	background: rgba(147, 112, 219, 0.5);
+	color: #ffffff;
 }
 
 /* Tray */
@@ -58,13 +60,15 @@ window#waybar {
 /* Clock */
 
 #clock {
+	font-size: 13px;
 	padding: 0 10px;
-	color: #c8c2b8;
+	color: #ffffff;
 }
 
 /* Audio */
 
 #pulseaudio {
+	font-size: 13px;
 	padding: 0 6px;
 	color: #c8c2b8;
 }
@@ -72,6 +76,10 @@ window#waybar {
 /* Backlight */
 
 #backlight {
+	font-size: 13px;
 	padding: 0 6px;
 	color: #c8c2b8;
+}
+#battery{
+	font-size: 13px;
 }

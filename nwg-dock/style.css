@@ -1,0 +1,38 @@
+/* Фон всего меню */
+window {
+    background-color: rgba(30, 30, 46, 0.9); /* Темный лавандовый отлив */
+    color: #cdd6f4;
+}
+
+/* Поле поиска */
+entry {
+    background-color: rgba(49, 50, 68, 1);
+    border: 2px solid #cba6f7; /* Лавандовая рамка поиска */
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+    color: #cba6f7;
+}
+
+/* Иконки приложений */
+button {
+    padding: 15px;
+    border-radius: 15px;
+    transition: all 0.2s ease;
+}
+
+/* Когда наводишь на иконку в меню */
+button:hover {
+    background-color: rgba(203, 166, 247, 0.2);
+    box-shadow: 0 0 10px rgba(203, 166, 247, 0.4);
+}
+
+/* Цвет текста под иконками */
+label {
+    color: #cdd6f4;
+    font-weight: bold;
+}
+#launcher {
+    color: #cba6f7;
+    background-color: rgba(203, 166, 247, 0.1);
+}

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-IF="wlan0"
+IF="wlp62s0"
 ESSID=$(iwgetid -r)
 IP=$(ip -4 addr show $IF 2>/dev/null | grep inet | awk '{print $2}' | cut -d/ -f1)
 
@@ -20,10 +20,10 @@ DOWN=$(( (RX2 - RX1) / 1024 ))
 UP=$(( (TX2 - TX1) / 1024 ))
 
 if ping -c1 -W1 1.1.1.1 &>/dev/null; then
-    case $QUAL in 100|9*) ICON="󰤨" ;; 8*) ICON="󰤥" ;; 6*|7*) ICON="󰤢" ;; 4*|5*) ICON="󰤟" ;; *)  ICON="󰤯" ;; esac
+    case $QUAL in 100|9*) ICON="📡" ;; 8*) ICON="󰤥" ;; 6*|7*) ICON="󰤢" ;; 4*|5*) ICON="󰤟" ;; *)  ICON="󰤯" ;; esac
     COLOR="#00ff00"
 else
-    ICON="󰤭"
+    ICON="🌐"
     COLOR="#ff8800"
 fi
 

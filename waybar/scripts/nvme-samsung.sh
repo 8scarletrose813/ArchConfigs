@@ -16,7 +16,7 @@ PCT=$(( 100 * USED / TOTAL ))
 if (( PCT < 5 )); then
     BAR="%{F#cc3300}${PCT}%░░░░░░░░░░░░░░░░░░░░%{F-}"
 else
-    filled=$(( (PCT) / 5 ))
+    filled=$(( (PCT) / 20 ))
     BAR="%{F#ff6600}${PCT}%$(printf "█%.0s" $(seq 1 $filled))%{F#cc3300}$(printf "░%.0s" $(seq 1 $((20-filled))))%{F-}"
 fi
 

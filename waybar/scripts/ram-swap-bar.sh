@@ -8,7 +8,7 @@ if (( ram_pct < 10 )); then
     ram_bar="%{F#b38300}${ram_pct}%░░░░░░░░░░%{F-}"
 else
     filled=$(( ram_pct / 10 ))
-    ram_bar="%{F#ffbb00}${ram_pct}%$(printf "█%.0s" $(seq 1 $filled))%{F#b38300}$(printf "░%.0s" $(seq 1 $((10 - filled))))%{F-}"
+    ram_bar="%{F#ffbb00}${ram_pct}%$(printf "█%.0s" $(seq 1 $filled))%{F#b38300}$(printf "░%.0s" $(seq 1 $((4 - filled))))%{F-}"
 fi
 
 swap_total=$(free -m | awk '/Swap:/ {print $2}')
