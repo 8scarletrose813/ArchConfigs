@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-IF="wlp62s0"
+IF="wlan0"
 ESSID=$(iwgetid -r)
 IP=$(ip -4 addr show $IF 2>/dev/null | grep inet | awk '{print $2}' | cut -d/ -f1)
 
